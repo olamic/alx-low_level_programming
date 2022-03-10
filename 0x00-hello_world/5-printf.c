@@ -3,14 +3,10 @@
 
 
 /**
- *
- *  *main -  print quote using printf
- *
- *   *Description: very simple snippet
- *
- *    *Return: 0
- *
- *     */
+ *main -  print quote using printf
+ *Description: very simple snippet
+ *Return: 0
+ */
 
 int main(void)
 
