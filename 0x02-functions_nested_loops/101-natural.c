@@ -1,54 +1,30 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_times_table - prints the times table
- * @n: integer for which the times table will be printed
- *
- * Description: prints the times table
- *
- * Return: void
+ * main - computes and prints the sum of all the multiples
+ * of 3 or 5 below 1024
+ * Return: Always 0 (Success)
  */
-
-void print_times_table(int n)
+int main(void)
 {
-	int row, column, product;
+	unsigned long int sum3, sum5, sum;
+	int i;
 
-	if (n >= 0 && n < 15)
+	sum3 = 0;
+	sum5 = 0;
+	sum = 0;
+
+	for (i = 0; i < 1024; ++i)
 	{
-		for (row = 0; row <= n; row++)
+		if ((i % 3) == 0)
 		{
-			for (column = 0; column <= n; column++)
-			{
-				product = row * column;
-
-				if (column == 0)
-					_putchar('0');
-				else if (product < 10)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(product % 10 + '0');
-				}
-				else if (product >= 10 && product < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-				else if (product > 99 && product < 1000)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(product / 100 + '0');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-			}
-			_putchar('\n');
+			sum3 = sum3 + i;
+		} else if ((i % 5) == 0)
+		{
+			sum5 = sum5 + i;
 		}
 	}
+	sum = sum3 + sum5;
+	printf("%lu\n", sum);
+	return (0);
 }
