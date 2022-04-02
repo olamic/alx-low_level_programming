@@ -1,1 +1,1 @@
-new code for static
+Introduction to C - Static libraries
