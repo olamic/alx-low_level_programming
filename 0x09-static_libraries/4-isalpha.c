@@ -1,13 +1,17 @@
 #include "main.h"
 /**
-*_isalpha - controls if a character is alphabetical
-*@c: character to be verified
-*Return: return 0 or 1
-*/
+ * _isalpha - check the c is letter
+ * @c: the character checked
+ * Return: 1 if lowercase or uppercase letter 0 otherwise
+ */
 int _isalpha(int c)
 {
-if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+{
 return (1);
-
+}
+else
+{
 return (0);
+}
 }

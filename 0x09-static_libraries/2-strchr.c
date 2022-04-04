@@ -1,23 +1,16 @@
 #include "main.h"
-#include <stddef.h> 
+#include <stdio.h>
 /**
-*_strchr - Returns a pointer to the first occurrence
-*of the character c in the string s, or NULL if the
-*character is not found
-*
-*@s:string targeted
-*@c:character targeted
-*
-*Return: returns pointer to first occcurence of c
-*/
+ *_strchr - locates a character in a string
+ *@s: s
+ *@c: c
+ *Return: pointer
+ **/
 char *_strchr(char *s, char c)
 {
-	int i;
-
-	for (i = 0; (s[i] != c) && (s[i] != '\0'); i++)
-		;
-	if (s[i] == c)
-		return (s + i);
-	else
-		return (NULL);
-}
+	do {
+		if (*s == c)
+			return (s);
+	} while (*s++);
+	return (NULL);
+	}
